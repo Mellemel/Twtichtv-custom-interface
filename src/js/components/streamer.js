@@ -1,12 +1,20 @@
 import React from 'react'
-import Row from './row'
+import ReactHtmlParser from 'react-html-parser'
 
 class Streamer extends React.Component {
   render() {
+    var data = this.props.data
     return (
-      <Row>
-        <h1>Twitch Featured Streamers</h1>
-      </Row>
+      <div className='row'>
+        <div className='col-sm-4'>
+          <img src={data.image} alt={data.title} />
+          <p>{data.title}</p>
+        </div>
+        <div className='col-sm-8'>
+          <h1>{data.stream.game}</h1>
+          {ReactHtmlParser(data.text)}
+        </div>
+      </div>
     )
   }
 }

@@ -4,12 +4,26 @@ import Streamer from './components/streamer'
 
 
 class Main extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      featured: [
+        {
+          title: '',
+          image: '',
+          text: '',
+          stream: {
+            game: ''
+          }
+        }]
+    }
+  }
   componentDidMount() {
     var url = 'https://api.twitch.tv/kraken/streams/featured'
     $.ajax({
       url: url,
+      cache: false,
       success: (data) => {
-        console.log(data)
         this.setState({ featured: data.featured })
       },
       error: (xhr, status, err) => {
@@ -18,8 +32,8 @@ class Main extends React.Component {
     })
   }
   render() {
-    var streamers = this.state.data.featured.map((streamer)=>{
-      return (<Streamer key={streamer.} data={streamer} />)
+    var streamers = this.state.featured.map((streamer) => {
+      return <Streamer key={streamer.title} data={streamer} />
     })
     return (
       <div className='row'>
