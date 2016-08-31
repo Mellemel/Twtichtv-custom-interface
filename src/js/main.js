@@ -13,7 +13,11 @@ class Main extends React.Component {
           image: '',
           text: '',
           stream: {
-            game: ''
+            game: '',
+            viewers: 0,
+            channel: {
+              name: ''
+            }
           }
         }]
     }
@@ -24,6 +28,7 @@ class Main extends React.Component {
       url: url,
       cache: false,
       success: (data) => {
+        console.log(data)
         this.setState({ featured: data.featured })
       },
       error: (xhr, status, err) => {
@@ -37,7 +42,7 @@ class Main extends React.Component {
     })
     return (
       <div className='row'>
-        <div className='col-sm-8 col-sm-offset-2'>
+        <div className='col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2'>
           <Header />
           {streamers}
         </div>

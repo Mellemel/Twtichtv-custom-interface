@@ -1,9 +1,43 @@
-$color1: #626d71;
-$color2: #cfcdc0;
-$color3: #ddbc95;
-$color4: #b38867;
+$color1: #90afc5;
+$color2: #336b87;
+$color2dark: #28546a;
+$color3: #2a3132;
+$color3light: #475354;
+$color4: #763626;
 
 body {
+  background-color: $color2;
+  color: #e4e4e4;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  @media screen and (max-width: 768px){
+    text-align: center;
+  }
+}
+.container {
+  margin-top: 1%;
+}
+
+#header {
   background-color: $color3;
-  color: $color1;
+}
+
+.streamers {
+  border-left: 5px solid $color4;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $color2dark;
+}
+
+img {
+  width: auto;
+  max-height: 100%;
+  border: 3px solid $color4;
+  margin-top: 25px;
 }
