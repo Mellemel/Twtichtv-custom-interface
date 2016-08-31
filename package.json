@@ -1,0 +1,38 @@
+{
+  "name": "twitch-api",
+  "version": "1.0.0",
+  "description": "Utilize Twitchtv's API and customize an interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mellemel/Twtichtv-streamer-list.git"
+  },
+  "author": "Melvin Canela <M.Canela92@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mellemel/Twtichtv-custom-interface/issues"
+  },
+  "homepage": "https://github.com/Mellemel/Twtichtv-custom-interface#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.14.0",
+    "browserify": "^13.1.0",
+    "eslint": "^3.2.2",
+    "eslint-plugin-react": "^6.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
