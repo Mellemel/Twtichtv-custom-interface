@@ -7,19 +7,7 @@ class Main extends React.Component {
   constructor() {
     super()
     this.state = {
-      featured: [
-        {
-          title: '',
-          image: '',
-          text: '',
-          stream: {
-            game: '',
-            viewers: 0,
-            channel: {
-              name: ''
-            }
-          }
-        }]
+      featured: undefined
     }
   }
   componentDidMount() {
@@ -37,20 +25,22 @@ class Main extends React.Component {
     })
   }
   render() {
-    var streamers = this.state.featured.map((streamer) => {
-      return <Streamer key={streamer.title} data={streamer} />
-    })
-    return (
-      <div className='row'>
-        <div className='col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2'>
-          <Header />
-          {streamers}
+    if (!this.state.featured) {
+      return (<h1>Response not here yet</h1>)
+    } else {
+      var streamers = this.state.featured.map((streamer) => {
+        return <Streamer key={streamer.title} data={streamer} />
+      })
+      return (
+        <div className='row'>
+          <div className='col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2'>
+            <Header />
+            {streamers}
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
 }
 
 export default Main
-
-
