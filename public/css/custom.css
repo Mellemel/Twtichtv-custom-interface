@@ -13,6 +13,9 @@ h1 {
 .h3 {
   font-weight: 700; }
 
+.h4 {
+  color: #ddd; }
+
 a:hover, a:active, a:focus {
   text-decoration: none !important; }
 
@@ -46,13 +49,12 @@ a:hover, a:active, a:focus {
           align-items: center; }
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top: 2px solid #2a3132;
+  border-top: 0;
   background-color: #336b87;
   color: #f5f5f5; }
 
 div.col-xs-8.col-sm-10.text-center p {
-  margin: 5px 0px 5px 0px;
-  color: #ddd; }
+  margin: 5px 0px 5px 0px; }
 
 .img-thumbnail {
   padding: 0;
@@ -60,8 +62,17 @@ div.col-xs-8.col-sm-10.text-center p {
   border-radius: 0px; }
 
 .glyphicon {
-  color: #2a3132;
+  color: #ddd;
   font-size: 25px; }
 
-.glyphicon:hover {
-  color: #763626; }
+.glyphicon:hover, .glyphicon:focus {
+  color: #336b87; }
+
+p {
+  color: #ddd; }
+
+p.online {
+  color: green; }
+
+p.offline {
+  color: indianred; }

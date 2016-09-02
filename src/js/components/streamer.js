@@ -51,7 +51,7 @@ class Streamer extends React.Component {
                 <img className='img-responsive img-thumbnail center-block' src='/images/offline_icon.png'></img>
               </div>
               <div className='col-xs-8 col-sm-10 text-center'>
-                <p className='h3'>{this.props.name}</p>
+                <p className='h3 offline'>{this.props.name}</p>
                 <p className='h4'>offline</p>
                 <span className='glyphicon glyphicon-menu-down'></span>
               </div>
@@ -71,10 +71,10 @@ class Streamer extends React.Component {
             </div>
             <div className='col-xs-8 col-sm-10 text-center'>
               <a href={data.stream.channel.url}>
-                <p className='h3'>{data.stream.channel.display_name}</p>
+                <p className='h3 online'>{data.stream.channel.display_name}</p>
               </a>
               <p className='h4'>{data.stream.game}</p>
-              <p>viewers: {data.stream.viewers}</p>
+              <p>Active Viewers: {data.stream.viewers}</p>
               <a className='glyphicon glyphicon-menu-down' data-toggle="collapse" data-parent="#accordion" href={'#' + this.props.name}>
               </a>
             </div>
@@ -89,7 +89,7 @@ class Streamer extends React.Component {
                 <img className='img-responsive img-thumbnail center-block' src={data.stream.preview.medium}/>
               </div>
               <div className= 'col-xs-12 col-sm-10 text-center' >
-                <p>Status: {data.stream.channel.status}</p>
+                <p className='h4'>Status: {data.stream.channel.status}</p>
                 <p>
                   {'Mature: ' + (data.stream.channel.mature ? 'Yes' : 'No')}
                   {' | Lanugage: ' + data.stream.channel.language}

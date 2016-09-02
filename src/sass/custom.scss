@@ -1,7 +1,6 @@
 $color1: #336b87;
 $color2: #13445c;
 $color3: #2a3132;
-$color4: #763626;
 
 body {
   background-color: #ddd;
@@ -19,6 +18,10 @@ h1 {
 
 .h3 {
   font-weight: 700;
+}
+
+.h4 {
+  color: #ddd;
 }
 
 a:hover, a:active, a:focus {
@@ -55,14 +58,13 @@ a:hover, a:active, a:focus {
 }
 
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
-  border-top: 2px solid $color3;
+  border-top: 0;
   background-color: $color1;
   color: #f5f5f5;
 }
 
 div.col-xs-8.col-sm-10.text-center p {
   margin: 5px 0px 5px 0px;
-  color: #ddd;
 }
 
 .img-thumbnail {
@@ -72,10 +74,22 @@ div.col-xs-8.col-sm-10.text-center p {
 }
 
 .glyphicon {
-  color: $color3;
+  color: #ddd;
   font-size: 25px;
 }
 
-.glyphicon:hover {
-  color: $color4;
+.glyphicon:hover, .glyphicon:focus {
+  color: $color1;
+}
+
+p {
+  color: #ddd;
+}
+
+p.online {
+  color: green;
+}
+
+p.offline {
+  color:indianred;
 }
