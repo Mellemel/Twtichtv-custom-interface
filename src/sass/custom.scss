@@ -7,35 +7,21 @@ $color4: #763626;
 
 body {
   background-color: $color2;
-  color: #e4e4e4;
 }
 
 h1 {
   font-weight: 900;
 }
 
-h2 {
-  @media screen and (max-width: 768px){
-    text-align: center;
-  }
-}
-.container {
-  margin-top: 1%;
-}
-
 #header {
   background-color: $color3;
 }
 
-.streamers {
-  border-left: 5px solid $color4;
-  margin-top: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: $color2dark;
+.panel-heading > .row, .panel-body > .row {
+  display: flex;
+  align-items: center;
 }
 
-img {
-  border: 3px solid $color4;
-  margin-top: 25px;
+div.col-xs-8.col-sm-10.text-center p{
+  margin: 5px 0px 5px 0px;
 }

@@ -17,7 +17,7 @@ class Streamer extends React.Component {
       url: url + name,
       success: (data) => {
         this.setState({ data: data })
-        if (!!data.stream){
+        if (!!data.stream) {
           this.props.onStatusChange(this.props.name)
         }
       },
@@ -28,6 +28,7 @@ class Streamer extends React.Component {
   }
   render() {
     var data = this.state.data
+    // if ajax call has not returned, display loading circle
     if (!data) {
       return (
         <div className='panel panel-default'>
@@ -40,6 +41,7 @@ class Streamer extends React.Component {
       )
     }
     data = this.state.data
+    // if streamer is not online, display offline properties
     if (!data.stream) {
       return (
         <div className='panel panel-default'>
@@ -58,14 +60,14 @@ class Streamer extends React.Component {
         </div>
       )
     }
-
+    // if streamer is online, display data
     return (
       <div className='panel panel-default'>
         <div className='panel-heading'>
           {/* start of custom content */}
           <div className='row'>
             <div className='col-xs-4 col-sm-2'>
-              <img className='img-responsive img-rounded center-block' src={data.stream.preview.medium}/>
+              <img className='img-responsive img-rounded center-block' src={data.stream.channel.logo}/>
             </div>
             <div className='col-xs-8 col-sm-10 text-center'>
               <a href={data.stream.channel.url}>
@@ -73,8 +75,8 @@ class Streamer extends React.Component {
               </a>
               <p className='h4'>{data.stream.game}</p>
               <p>viewers: {data.stream.viewers}</p>
-              <span className='glyphicon glyphicon-menu-down' data-toggle="collapse" data-parent="#accordion" data-target={'#' + this.props.name}>
-              </span>
+              <a className='glyphicon glyphicon-menu-down' data-toggle="collapse" data-parent="#accordion" href={'#' + this.props.name}>
+              </a>
             </div>
           </div>
           {/* end of custom content */}
@@ -84,16 +86,16 @@ class Streamer extends React.Component {
             {/* start of custom content */}
             <div className='row'>
               <div className='col-xs-4 col-sm-2'>
-                <img className='img-responsive img-rounded center-block' src={data.stream.channel.logo}/>
+                <img className='img-responsive img-rounded center-block' src={data.stream.preview.medium}/>
               </div>
-              <div className= 'col-xs-4 col-sm-6 text-center' >
-                <p className= 'h3'>Status: {data.stream.channel.status}</p>
-              </div>
-              <div className='col-xs-4 col-sm-4 text-center'>
-                <p className='h3'>Mature: {data.stream.channel.mature}</p>
-                <p className='h4'>Lanugage: {data.stream.channel.language}</p>
-                <p className='h4'>Followers: {data.stream.channel.followers}</p>
-                <p className='h4'>Views: {data.stream.channel.views}</p>
+              <div className= 'col-xs-8 col-sm-10 text-center' >
+                <p>Status: {data.stream.channel.status}</p>
+                <p>
+                  {'Mature: ' + (data.stream.channel.mature ? 'Yes' : 'No')}
+                  {' | Lanugage: ' + data.stream.channel.language}
+                  {' | Followers: ' + data.stream.channel.followers}
+                  {' | Views: ' + data.stream.channel.views}
+                </p>
               </div>
             </div>
             {/* end of custom content */}
