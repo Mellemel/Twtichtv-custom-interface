@@ -48,7 +48,7 @@ class Streamer extends React.Component {
           <div className='panel-heading'>
             <div className='row'>
               <div className='col-xs-4 col-sm-2'>
-                <img className='img-responsive img-rounded center-block' src='/images/offline_icon.png'></img>
+                <img className='img-responsive img-thumbnail center-block' src='/images/offline_icon.png'></img>
               </div>
               <div className='col-xs-8 col-sm-10 text-center'>
                 <p className='h3'>{this.props.name}</p>
@@ -67,7 +67,7 @@ class Streamer extends React.Component {
           {/* start of custom content */}
           <div className='row'>
             <div className='col-xs-4 col-sm-2'>
-              <img className='img-responsive img-rounded center-block' src={data.stream.channel.logo}/>
+              <img className='img-responsive img-thumbnail center-block' src={data.stream.channel.logo}/>
             </div>
             <div className='col-xs-8 col-sm-10 text-center'>
               <a href={data.stream.channel.url}>
@@ -86,7 +86,7 @@ class Streamer extends React.Component {
             {/* start of custom content */}
             <div className='row'>
               <div className='col-sm-2 hidden-xs'>
-                <img className='img-responsive img-rounded center-block' src={data.stream.preview.medium}/>
+                <img className='img-responsive img-thumbnail center-block' src={data.stream.preview.medium}/>
               </div>
               <div className= 'col-xs-12 col-sm-10 text-center' >
                 <p>Status: {data.stream.channel.status}</p>

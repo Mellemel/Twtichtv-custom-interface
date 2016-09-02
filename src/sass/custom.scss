@@ -1,23 +1,27 @@
-$color1: #90afc5;
-$color2: #336b87;
-$color2dark: #28546a;
+$color1: #336b87;
+$color2: #13445c;
 $color3: #2a3132;
-$color3light: #475354;
 $color4: #763626;
 
 body {
-  background-color: $color2;
+  background-color: #ddd;
 }
 
 h1 {
   background-color: $color3;
   font-weight: 900;
-  color: #fff;
+  color: #ddd;
   margin: 0px;
   padding: 20px 0px 15px 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  border: 1px solid transparent;
 }
 
-a:hover {
+.h3 {
+  font-weight: 700;
+}
+
+a:hover, a:active, a:focus {
   text-decoration: none !important;
 }
 
@@ -32,11 +36,46 @@ a:hover {
   background-color: $color3;
 }
 
+.panel-group .panel {
+  margin-top: 4px;
+  border: 0px;
+  border-left: 2px solid $color3;
+  border-radius: 0px;
+}
+
+.panel-heading {
+  border: 0px !important;
+}
+.panel-default > .panel-heading {
+  background-color: $color2;
+}
 .panel-heading > .row, .panel-body > .row {
   display: flex;
   align-items: center;
 }
 
-div.col-xs-8.col-sm-10.text-center p{
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+  border-top: 2px solid $color3;
+  background-color: $color1;
+  color: #f5f5f5;
+}
+
+div.col-xs-8.col-sm-10.text-center p {
   margin: 5px 0px 5px 0px;
+  color: #ddd;
+}
+
+.img-thumbnail {
+  padding: 0;
+  border: 5px solid $color3;
+  border-radius: 0px;
+}
+
+.glyphicon {
+  color: $color3;
+  font-size: 25px;
+}
+
+.glyphicon:hover {
+  color: $color4;
 }
