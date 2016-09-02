@@ -85,10 +85,10 @@ class Streamer extends React.Component {
           <div className='panel-body'>
             {/* start of custom content */}
             <div className='row'>
-              <div className='col-xs-4 col-sm-2'>
+              <div className='col-sm-2 hidden-xs'>
                 <img className='img-responsive img-rounded center-block' src={data.stream.preview.medium}/>
               </div>
-              <div className= 'col-xs-8 col-sm-10 text-center' >
+              <div className= 'col-xs-12 col-sm-10 text-center' >
                 <p>Status: {data.stream.channel.status}</p>
                 <p>
                   {'Mature: ' + (data.stream.channel.mature ? 'Yes' : 'No')}
