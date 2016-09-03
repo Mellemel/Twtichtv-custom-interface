@@ -6,7 +6,7 @@ class StreamerList extends React.Component {
     super()
 
     this.state = {
-      streamers: ['riotgames', 'starladder1', 'beyondthesummit', 'esl_csgo', 'tsm_theoddone', 'tsm_dyrus', 'imaqtpie', 'garenatw', 'Nightblue3', 'nl_kripp', 'freecodecamp']
+      streamers: ['riotgames', 'starladder1', 'beyondthesummit', 'esl_csgo', 'tsm_theoddone', 'tsm_dyrus', 'imaqtpie', 'garenatw', 'Nightblue3', 'nl_kripp', 'freecodecamp', 'brunofin']
     }
 
     this.state.streamers = this.state.streamers.map((name) => {
