@@ -74,8 +74,14 @@ p {
 p.online {
   color: green; }
 
-p.offline {
+p.online:hover {
+  color: lightgreen; }
+
+a.offline {
   color: indianred; }
+
+a.offline:hover {
+  color: red; }
 
 .loader {
   border: 16px solid #f3f3f3;

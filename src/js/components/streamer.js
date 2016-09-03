@@ -23,14 +23,24 @@ class Streamer extends React.Component {
       },
       error: (xhr, status, err) => {
         console.error(url, status, err.toString())
-        let data = { stream: false, status: true, name: this.props.name }
+        let data = { 
+          stream: false, 
+          status: true, 
+          name: this.props.name, 
+          url: 'https://twitch.tv/' + this.props.name 
+        }
         this.setState({ data: data })
       }
     })
   }
   extractData(data) {
     if (!data.stream) {
-      let tmpData = { stream: false, status: false, name: this.props.name }
+      let tmpData = { 
+        stream: false, 
+        status: false, 
+        name: this.props.name,
+        url: 'https://twitch.tv/' + this.props.name
+      }
       return this.setState({ data: tmpData })
     }
     let tmpData = {
@@ -74,7 +84,7 @@ class Streamer extends React.Component {
                 <img className='img-responsive img-thumbnail center-block' src='/images/offline_icon.png'></img>
               </div>
               <div className='col-xs-8 col-sm-10 text-center'>
-                <p className='h3 offline'>{data.name}</p>
+                <p className='h3'><a className='offline' href={data.url}>{data.name}</a></p>
                 <p className='h4'><em>{data.status? 'account closed' : 'offline'}</em></p>
                 <span className='glyphicon glyphicon-menu-down'></span>
               </div>
